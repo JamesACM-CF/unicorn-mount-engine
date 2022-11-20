@@ -1,0 +1,9 @@
+Rails.application.routes.draw do
+  root to: "home#index"
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+
+  # Defines the root path route ("/")
+  # root "articles#index"
+  mount Blorgh::Engine, at: "/blog"
+  devise_for :users
+end
